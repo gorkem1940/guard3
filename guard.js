@@ -22,7 +22,7 @@ const arr = [""];
 //--------------------------BOT DURUM MESAJI - SES KANALI--------------------------\\
 
 client.on("ready", async () => {
-client.user.setPresence({ activity: { name: "Tanrısız ❤️‍ 1940" }, status: "dnd" });
+client.user.setPresence({ activity: { name: "Gorkem ❤️‍ 1940" }, status: "dnd" });
 })
 
 //--------------------------BOT DURUM MESAJI - SES KANALI--------------------------\\
@@ -54,7 +54,7 @@ guild.roles.cache.filter(r => {return (arr.some(a => r.permissions.has(a)) && !b
 x.edit({permissions: x.permissions.remove(arr)});});
 uye.ban({reason: "Sunucudan Üye Yasakladığı İçin Yasaklandı.", days: 7});
 guild.members.unban(target.id);
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`), **${target.tag}** (\`${target.id}\`) kullanıcısını yasakladı. \n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım\` **${target.tag}** üyesinin banını kaldırdım. `)
@@ -82,7 +82,7 @@ if (kullanici.roles.highest.rawPosition <= uye.roles.highest.rawPosition) return
 guild.roles.cache.filter(r => {return (arr.some(a => r.permissions.has(a)) && !botroles.includes(r.id) && r.rawPosition < kullanici.roles.highest.rawPosition)}).map(x => {console.log(x.name);
 x.edit({permissions: x.permissions.remove(arr)})});
 user.ban({reason: "Sunucudan Üye Attığı İçin Yasaklandı.", days: 7});
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${user} (\`${user.id}\`), **${target.tag}** (\`${target.id}\`) kullanıcısını attı. \n\n Tüm yetkileri kapatıp ${user} üyesini sunucudan \`yasakladım.\``)
@@ -109,7 +109,7 @@ if (kullanic.roles.highest.rawPosition < uye.roles.highest.rawPosition) return;
 guild.roles.cache.filter(r => {return (arr.some(a => r.permissions.has(a)) && !botroles.includes(r.id) && r.rawPosition < kullanic.roles.highest.rawPosition)}).map(x => {console.log(x.name);
 x.edit({permissions: x.permissions.remove(arr)});});
 uye.ban({reason: "Webhookları Değiştirmekten(açmak-silmek-düzenlemek) yasaklandı.", days: 7});
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) Webhook Oluşturdu.\n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım.\``)
@@ -137,7 +137,7 @@ guild.roles.cache.filter(r => {return (arr.some(a => r.permissions.has(a)) && !b
 console.log(x.name);
 x.edit({permissions: x.permissions.remove(arr)});});
 uye.ban({reason: "Kanal Oluşturmaktan Yasaklandı.", days: 7});
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) Kanal oluşturdu.\n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım.\``)
@@ -163,7 +163,7 @@ if(kullanici.roles.highest.rawPosition < uye.roles.highest.rawPosition)
 guild.roles.cache.filter(r => {return (arr.some(a => r.permissions.has(a)) && !botroles.includes(r.id) && r.rawPosition < kullanici.roles.highest.rawPosition)}).map(x => {console.log(x.name);
 x.edit({permissions: x.permissions.remove(arr)})});
 uye.ban({reason: "Kanal Silmekten Yasaklandı.", days: 7});
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) ${channel.name} Kanalını Sildi.\n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım.\``)
@@ -192,7 +192,7 @@ const kullanici = guild.members.cache.get(client.user.id);
 if(kullanici.roles.highest.rawPosition < uye.roles.highest.rawPosition)
 guild.roles.cache.filter(r => {return (arr.some(a => r.permissions.has(a)) && !botroles.includes(r.id) && r.rawPosition < kullanici.roles.highest.rawPosition)}).map(x => {console.log(x.name); x.edit({permissions: x.permissions.remove(arr)});});
 uye.ban({reason: "Rol Silmekten Yasaklandı.", days: 7});
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) (\`${role.name}\`) Rolünü sildi!\n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım.\``)
@@ -220,7 +220,7 @@ console.log(x.name);
 x.edit({permissions: x.permissions.remove(arr)});
 });
 uye.ban({reason: "Rol Güncellemekten Yasaklandı.", days: 7});
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) ${newRole.name} Rolüne Yetki Verdi.\n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım.\``)
@@ -250,7 +250,7 @@ console.log(q.name);
 q.edit({permissions: q.permissions.remove(arr)});});
 uye.ban({reason: "Rol Oluşturmaktan Yasaklandı"});
 role.delete();
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) Rol Oluşturuldu.\n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım.\``)
@@ -278,7 +278,7 @@ guild.roles.cache.filter(r => { return (arr.some(a => r.permissions.has(a)) && !
 x.edit({permissions: x.permissions.remove(arr)});});
 uye.ban({ reason: "Sunucuya Bot Getirdiği İçin Yasaklandı.", days: 7 });
 member.ban({ reason: "Sunucuya Bot İzinsiz Çekildi.", days: 7 })
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, guild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) Sunucuya ${member} Botunu Ekledi.\n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım.\``)
@@ -310,7 +310,7 @@ json: {code: `${oldGuild.vanityURLCode}`}});
 newGuild.roles.cache.filter(r => { return(arr.some(a => r.permissions.has(a)) && !botroles.includes(r.id) && r.rawPosition < kullanici.roles.highest.rawPosition);}).map(x => {console.log(x.name);
 x.edit({permissions: x.permissions.remove(arr)});});
 uye.ban({reason: "Url'yi Değiştirdiği İçin Yasaklandı.", days: 7});
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, newGuild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) Sunucunun Urlsini Değiştirdi.\n\n Sunucunun Urlsini \`${newGuild.vanityURLCode}\` Olarak Değiştirdi, ${uye} üyesini sunucudan \`yasakladım.\``)
@@ -324,7 +324,7 @@ newGuild.setName(oldGuild.name);
 uye.ban({reason: "Sunucunun İsmini Değiştirdiği İçin Yasaklandı", days: 7});
 newGuild.roles.cache.filter(r => { return (arr.some(a => r.permissions.has(a)) && !botroles.includes(r.id) && r.rawPosition < kullanici.roles.highest.rawPosition)}).map(x => { console.log(x.name);
 x.edit({permissions: x.permissions.remove(arr)});
-let yazı = 'Tanrısız'
+let yazı = 'Gorkem'
 const strigaembed = new MessageEmbed()
 .setAuthor(yazı, newGuild.iconURL({dynamic:true}))
 .setDescription(`${uye} (\`${uye.id}\`) Sunucu Ayarlarını Güncelledi.\n\n Tüm yetkileri kapatıp ${uye} üyesini sunucudan \`yasakladım.\``)
